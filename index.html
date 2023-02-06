@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommendations </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1170)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin: 0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height:59px;
+}
+#navbar{
+    display:flex;
+    align-items:center;
+    position:sticky;
+    top:0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#logo {
+  margin:10px 34px;
+}
+#logo img{
+    height:59px;
+    margin:3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('https://th.bing.com/th/id/OIP.maQpFJiRuDMauaTZ3N7KiQHaEo?pid=ImgDet&rs=1');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('https://thumbs.dreamstime.com/z/contact-us-customer-support-hotline-people-connect-call-customer-support-contact-us-customer-support-hotline-people-connect-call-129786983.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+/* Navigation */
+#navbar {
+    flex-direction: column;
+}
+
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+}
+/* Home section */
+#home{
+    height: 370px; 
+    padding: 3px 28px;
+}
+
+#home::before{
+    height: 480px; 
+}
+
+#home p{
+    font-size: 13px;
+}
+
+/* Services section  */
+#services{
+    flex-direction: column;
+}
+
+#services .box { 
+    padding: 14px;
+    margin: 2px 0px; 
+    margin-bottom: 20px;
+}
+
+/* Clients section */
+#clients{
+    flex-wrap: wrap;
+}
+
+#clients img{
+    width: 66px;
+    padding: 6px;
+    height: auto;
+}
+
+/* Contact us section */
+#contact-box form{
+    width:80%;
+}
+/* Footer */
+
+/* Utility classes */
+.h-primary{
+    font-size:26px;
+}
+.btn{
+    font-size: 13px;
+    padding: 4px 8px;
+}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://th.bing.com/th/id/R.a915207e7483ab02680b733ecac45c90?rik=Uh0TW1wQLWq7LQ&riu=http%3a%2f%2fcomps.canstockphoto.com%2fcan-stock-photo_csp15710063.jpg&ehk=40hS5T30S%2f7VbvZSBuJVLzCWblwTC1RJwFUXf%2bf2t28%3d&risl=&pid=ImgRaw&r=0 "  alt="MyonlineMeal.com">
+
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyonlineMeal</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ea provident laudantium eaque dolor mollitia explicabo consequuntur sed minima, nemo nostrum recusandae voluptas saepe!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quia dolores eaque.</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section id="services-container">
+     <h1 class="h-primary center">Our Services</h1>
+     <div id="services">
+        <div class="box">
+            <img src="https://th.bing.com/th/id/R.3b73ce92a86df9e275f4f2955576ba2d?rik=tCzl0TJKsDwxQg&riu=http%3a%2f%2fwww.zastavki.com%2fpictures%2f1680x1050%2f2011%2fFood_Pizza_Delicious_pizza_029580_.jpg&ehk=2plsn8oD7Y%2b%2bDipzFxzgSV9gUW9Lp4wstdsKLVDzsFk%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <h2 class="h-secondary center">Food Catering</h2>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nulla provident reprehenderit similique corporis sit iusto aliquid, debitis laborum culpa, nam assumenda fuga quibusdam?</p>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/originals/43/c9/de/43c9de00653ffd7b1941e1ab9de7e6e2.jpg" alt="">
+            <h2 class="h-secondary center">Bulk Ordering</h2>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nulla provident reprehenderit similique corporis sit iusto aliquid, debitis laborum culpa, nam assumenda fuga quibusdam?</p>
+        </div>
+        <div class="box">
+            <img src="https://th.bing.com/th/id/R.cf056cb2604dae2b096ee31a7901deb5?rik=2Koz4t%2fW0itApA&riu=http%3a%2f%2fwww.evisionsystem.com%2fimages%2fpartners%2fdelivery.png&ehk=gxq9eXz%2b3GCB27QYHdpGHtCF%2burMNq3ReHWImhVYqDo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="">
+            <h2 class="h-secondary center">Food Ordering</h2>
+            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nulla provident reprehenderit similique corporis sit iusto aliquid, debitis laborum culpa, nam assumenda fuga quibusdam?</p>
+        </div>
+     </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://th.bing.com/th/id/R.db8a2295a23ee35b947c3728bc844cbf?rik=kpWcjDXlC9Jnhg&riu=http%3a%2f%2f2.bp.blogspot.com%2f-gFsXZlZ6ARQ%2fUtQWvIG5RgI%2fAAAAAAAABTg%2fGUErjFEws-k%2fs1600%2f3.jpg&ehk=kLp6DOkmk1nsB8EJwFEauKpqMFm52EYNCEpCKwowgmo%3d&risl=&pid=ImgRaw&r=0" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://logos-marques.com/wp-content/uploads/2021/03/HP-Logo-2008.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn.dribbble.com/users/1346218/screenshots/7052671/cc-color-danielbeadle_4x.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="https://www.fastfoodprice.co.uk/wp-content/uploads/2014/03/Mcdonalds-logos.jpg" alt="Our Client">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone no">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <input type="message" name="message" id="message" cols="30" rows="10">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.MyonlineMeal.com.All rights reserved!
+        </div>
+    </footer>
+</body>
+</html>
